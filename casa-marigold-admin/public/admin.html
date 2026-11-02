@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Admin | Casa Marigold</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="/">Casa Marigold</a>
+  <nav>
+    <a href="/">View site</a>
+    <button class="link-btn" id="logout" hidden>Log out</button>
+  </nav>
+</header>
+
+<main class="admin">
+  <section id="loginView" hidden>
+    <form class="login" id="loginForm">
+      <h1>Admin login</h1>
+      <label for="password">Password</label>
+      <input id="password" type="password" autocomplete="current-password" required autofocus>
+      <p class="msg error" id="loginMsg" role="alert"></p>
+      <button class="btn" type="submit">Log in</button>
+    </form>
+  </section>
+
+  <section id="editorView" hidden>
+    <div class="editor-head">
+      <h1>Edit menu</h1>
+      <div class="editor-actions">
+        <button class="btn ghost" type="button" id="addBtn">Add dish</button>
+        <button class="btn" type="submit" form="editor" id="saveBtn">Save changes</button>
+      </div>
+    </div>
+    <p class="msg" id="saveMsg" role="status"></p>
+    <form id="editor">
+      <div id="rows"></div>
+    </form>
+    <datalist id="cats"></datalist>
+  </section>
+</main>
+
+<script src="admin.js"></script>
+</body>
+</html>
